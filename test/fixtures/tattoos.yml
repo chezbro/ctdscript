@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  script: MyString
+  number_of_views: 1
+  font_id: 
+  font_id: 1
+
+two:
+  script: MyString
+  number_of_views: 1
+  font_id: 
+  font_id: 1
