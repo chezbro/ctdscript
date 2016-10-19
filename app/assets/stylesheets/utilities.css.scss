@@ -1,0 +1,227 @@
+$spacer: 1rem !default;
+$spacer-x: $spacer !default;
+$spacer-y: $spacer !default;
+
+/*============================================
+  Margins and Padding
+==============================================*/
+
+.margin-top-40{
+  margin-top:40px;
+}
+
+.negative-margin-t-sm{ margin-top: -10px !important;}
+.negative-margin-t-md{ margin-top: -25px !important;}
+.negative-margin-t-lg{ margin-top: -50px !important;}
+.negative-margin-t-45{ margin-top: -45px !important;}
+.negative-margin-t-33{ margin-top: -33px !important;}
+
+.margin-a-0 { margin:        0 !important; }
+.margin-t-0 { margin-top:    0 !important; }
+.margin-r-0 { margin-right:  0 !important; }
+.margin-b-0 { margin-bottom: 0 !important; }
+.margin-l-0 { margin-left:   0 !important; }
+.margin-x-0 { margin-right:  0 !important; margin-left:   0 !important; }
+.margin-y-0 { margin-top:    0 !important; margin-bottom: 0 !important; }
+
+.margin-a { margin:        $spacer !important; }
+.margin-t { margin-top:    $spacer-y !important; }
+.margin-r { margin-right:  $spacer-x !important; }
+.margin-b { margin-bottom: $spacer-y !important; }
+.margin-l { margin-left:   $spacer-x !important; }
+.margin-x-auto { margin-right: auto !important; margin-left: auto !important; }
+.margin-0-auto{margin: 0 auto;}
+
+
+.margin-a-xs { margin:        ($spacer * .25) !important; }
+.margin-t-xs { margin-top:    ($spacer-y * .25) !important; }
+.margin-r-xs { margin-right:  ($spacer-y * .25) !important; }
+.margin-b-xs { margin-bottom: ($spacer-y * .25) !important; }
+.margin-l-xs { margin-left:   ($spacer-y * .25) !important; }
+.margin-x-xs { margin-right:  ($spacer-x * .25) !important; margin-left:   ($spacer-x * .25) !important; }
+.margin-y-xs { margin-top:    ($spacer-y * .25) !important; margin-bottom: ($spacer-y * .25) !important; }
+
+
+.margin-a-sm { margin:        ($spacer * .75) !important; }
+.margin-t-sm { margin-top:    ($spacer-y * .75) !important; }
+.margin-r-sm { margin-right:  ($spacer-y * .75) !important; }
+.margin-b-sm { margin-bottom: ($spacer-y * .75) !important; }
+.margin-l-sm { margin-left:   ($spacer-y * .75) !important; }
+.margin-x-sm { margin-right:  ($spacer-x * .75) !important; margin-left:   ($spacer-x * .75) !important; }
+.margin-y-sm { margin-top:    ($spacer-y * .75) !important; margin-bottom: ($spacer-y * .75) !important; }
+
+
+.margin-a-md { margin:        ($spacer * 1.5) !important; }
+.margin-t-md { margin-top:    ($spacer-y * 1.5) !important; }
+.margin-r-md { margin-right:  ($spacer-y * 1.5) !important; }
+.margin-b-md { margin-bottom: ($spacer-y * 1.5) !important; }
+.margin-l-md { margin-left:   ($spacer-y * 1.5) !important; }
+.margin-x-md { margin-right:  ($spacer-x * 1.5) !important; margin-left:   ($spacer-x * 1.5) !important; }
+.margin-y-md { margin-top:    ($spacer-y * 1.5) !important; margin-bottom: ($spacer-y * 1.5) !important; }
+
+.margin-a-lg { margin:        ($spacer * 3) !important; }
+.margin-t-lg { margin-top:    ($spacer-y * 3) !important; }
+.margin-r-lg { margin-right:  ($spacer-y * 3) !important; }
+.margin-b-lg { margin-bottom: ($spacer-y * 3) !important; }
+.margin-b-llg { margin-bottom: ($spacer-y * 4.5) !important; }
+.margin-l-lg { margin-left:   ($spacer-y * 3) !important; }
+.margin-x-lg { margin-right:  ($spacer-x * 3) !important; margin-left:   ($spacer-x * 3) !important; }
+.margin-y-lg { margin-top:    ($spacer-y * 3) !important; margin-bottom: ($spacer-y * 3) !important; }
+
+.margin-a-xlg { margin:        ($spacer * 6) !important; }
+.margin-t-xlg { margin-top:    ($spacer-y * 6) !important; }
+.margin-r-xlg { margin-right:  ($spacer-y * 6) !important; }
+.margin-b-xlg { margin-bottom: ($spacer-y * 6) !important; }
+.margin-l-xlg { margin-left:   ($spacer-y * 6) !important; }
+.margin-x-xlg { margin-right:  ($spacer-x * 6) !important; margin-left:   ($spacer-x * 6) !important; }
+.margin-y-xlg { margin-top:    ($spacer-y * 6) !important; margin-bottom: ($spacer-y * 6) !important; }
+
+.margin-b-sm-mobile{
+  margin-bottom: ($spacer-y * .75) !important;
+}
+
+
+.pad-bottom-15{
+  padding-bottom:15px;
+}
+
+.pad-bottom-30{
+  padding-bottom:30px;
+}
+
+.padding-0-15{
+  padding: 0px 15px!important;
+}
+
+.padding-15-0{
+  padding: 15px 0px!important;
+}
+
+.padding-a-0 { padding:        0 !important; }
+.padding-t-0 { padding-top:    0 !important; }
+.padding-r-0 { padding-right:  0 !important; }
+.padding-b-0 { padding-bottom: 0 !important; }
+.padding-l-0 { padding-left:   0 !important; }
+.padding-x-0 { padding-left:   0 !important; padding-right: 0 !important; }
+.padding-y-0 { padding-top:    0 !important; padding-bottom: 0 !important; }
+
+.padding-a { padding:        $spacer !important; }
+.padding-t { padding-top:    $spacer-y !important; }
+.padding-r { padding-right:  $spacer-x !important; }
+.padding-b { padding-bottom: $spacer-y !important; }
+.padding-l { padding-left:   $spacer-x !important; }
+
+
+
+.padding-a-xs { padding:        ($spacer * .25) !important; }
+.padding-t-xs { padding-top:    ($spacer-y * .25) !important; }
+.padding-r-xs { padding-right:  ($spacer-y * .25) !important; }
+.padding-b-xs { padding-bottom: ($spacer-y * .25) !important; }
+.padding-l-xs { padding-left:   ($spacer-y * .25) !important; }
+
+.padding-a-sm { padding:        ($spacer * .75) !important; }
+.padding-t-sm { padding-top:    ($spacer-y * .75) !important; }
+.padding-r-sm { padding-right:  ($spacer-y * .75) !important; }
+.padding-b-sm { padding-bottom: ($spacer-y * .75) !important; }
+.padding-l-sm { padding-left:   ($spacer-y * .75) !important; }
+
+.padding-a-md { padding:        ($spacer * 1.5) !important; }
+.padding-t-md { padding-top:    ($spacer-y * 1.5) !important; }
+.padding-r-md { padding-right:  ($spacer-y * 1.5) !important; }
+.padding-b-md { padding-bottom: ($spacer-y * 1.5) !important; }
+.padding-l-md { padding-left:   ($spacer-y * 1.5) !important; }
+.padding-x-md { padding-right:  ($spacer-x * 1.5) !important; padding-left:   ($spacer-x * 1.5) !important; }
+.padding-y-md { padding-top:    ($spacer-y * 1.5) !important; padding-bottom: ($spacer-y * 1.5) !important; }
+
+.padding-a-lg { padding:        ($spacer * 3) !important; }
+.padding-t-lg { padding-top:    ($spacer-y * 3) !important; }
+.padding-r-lg { padding-right:  ($spacer-y * 3) !important; }
+.padding-b-lg { padding-bottom: ($spacer-y * 3) !important; }
+.padding-l-lg { padding-left:   ($spacer-y * 3) !important; }
+.padding-x-lg { padding-right:  ($spacer-x * 3) !important; padding-left:   ($spacer-x * 3) !important; }
+.padding-y-lg { padding-top:    ($spacer-y * 3) !important; padding-bottom: ($spacer-y * 3) !important; }
+
+.padding-a-xl { padding:        ($spacer * 4) !important; 
+
+}
+.padding-t-xl { padding-top:    ($spacer-y * 4) !important; }
+.padding-r-xl { padding-right:  ($spacer-y * 4) !important; }
+.padding-b-xl { padding-bottom: ($spacer-y * 4) !important; }
+.padding-l-xl { padding-left:   ($spacer-y * 4) !important; }
+.padding-x-xl { padding-right:  ($spacer-x * 4) !important; padding-left:   ($spacer-x * 4) !important; }
+.padding-y-xl { padding-top:    ($spacer-y * 4) !important; padding-bottom: ($spacer-y * 4) !important; }
+
+
+/*============================================
+  Colors
+==============================================*/
+
+.white{
+  color: #fff;
+}
+
+/*============================================
+  Text Transform
+==============================================*/
+.text-lowercase      { text-transform: lowercase; }
+.text-uppercase      { text-transform: uppercase; }
+.text-capitalize     { text-transform: capitalize; }
+.text-underline      { text-decoration: underline; }
+.no-underline        { text-decoration: none;      }
+
+/*============================================
+  Text Alignment
+==============================================*/
+
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center !important; }
+.text-justify        { text-align: justify; }
+.text-nowrap         { white-space: nowrap; }
+
+
+/*============================================
+  Positioning 
+==============================================*/
+.position-relative{
+  position:relative;
+}
+
+.position-absolute{
+  position: absolute;
+}
+
+/*============================================
+  Floats
+==============================================*/
+
+.float-right{
+  float: right;
+}
+
+/*============================================
+  Display Settings
+==============================================*/
+.inline-block{
+  display: inline-block;
+}
+
+.display-block{
+  display: block;
+}
+
+.hidden{
+    display:none;
+}
+
+/*============================================
+  Font Styles
+==============================================*/
+
+.bold {
+  font-weight: 900;
+}
+
+.italic {
+  font-style: italic;
+}
