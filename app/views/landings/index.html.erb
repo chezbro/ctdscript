@@ -40,51 +40,66 @@
 
     <!-- Content -->
     <div class="container">
-        <p class="margin-t">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam omnis explicabo voluptate tempore saepe obcaecati sit quasi, ducimus voluptatum inventore accusamus similique provident, excepturi voluptas nesciunt sed. Cumque, similique. Nulla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus at laudantium officiis. Dolor numquam omnis, doloribus tenetur, vero id quam. Repudiandae esse necessitatibus eos, possimus inventore in similique provident nihil.</p>
-
-        <div class="row tattoo_script_content">
-            <div class="script_preferences col-md-offset-1 col-md-7">
-                <h4>Sizing and Color Options</h4>
-                <div class="margin-t margin-b">
-                    <%= form_tag({:controller => "landings", :action => 'update_font_size'}, :remote => true) do %>
-                        <%= number_field_tag :font_size, params[:font_size], placeholder: "Enter Font Size" %>
-                    <% end %>
+        <p class="margin-t-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam omnis explicabo voluptate tempore saepe obcaecati sit quasi, ducimus voluptatum inventore accusamus similique provident, excepturi voluptas nesciunt sed. Cumque, similique. Nulla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus at laudantium officiis. Dolor numquam omnis, doloribus tenetur, vero id quam. Repudiandae esse necessitatibus eos, possimus inventore in similique provident nihil.</p>
+        <div class="content margin-t-xlg margin-b-xlg">
+            <div class="row tattoo_script_content">
+                <div class="script_preferences col-md-offset-1 col-md-7">
+                    <h4>Sizing and Color Options</h4>
+                    <div class="margin-t margin-b">
+                        <ul class="font-size-list">
+                            <li>
+                                <%= link_to "Small", update_font_size_path(font_size: "small"), method: :post, remote: true%>
+                            </li>
+                            <li>
+                                <%= link_to "Medium", update_font_size_path(font_size: "medium"), method: :post, remote: true %>
+                            </li>
+                            <li>
+                                <%= link_to "Large", update_font_size_path(font_size: "large"), method: :post, remote: true %>
+                            </li>
+                            <li>
+                                <!-- Beginning of Form to Change Font Size  -->
+                                <%= form_tag({:controller => "landings", :action => 'update_font_size'}, :remote => true) do %>
+                                    <%= number_field_tag :custom_font_size, params[:custom_font_size], placeholder: "Enter Font Size" %>
+                                <% end %>
+                            </li>
+                    </div>
+                </div>
+                <div class="social-sharing col-md-3"><h4>Sharing Options</h4></div>
+            </div>
+            <div class="row">
+                <div class="enter_script_content col-md-offset-1 col-md-7">
+                <!-- Beginning of Form for Users to Enter Script -->
+                  <%= simple_form_for @tattoo, :url => {:controller => 'landings', :action => 'update_text'}, :html => { :class => '' }, remote: true  do |f| %>
+                    <%= f.input :script, label: false, placeholder: "Enter Your Words Here..." %>
+                  <% end %>
+                </div>
+                <div class="font_categories col-md-3">
+                  <h3>Font Categories</h3>
+                  <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
                 </div>
             </div>
-            <div class="social-sharing col-md-3"><h4>Sharing Options</h4></div>
-        </div>
-        <div class="row">
-            <div class="enter_script_content col-md-offset-1 col-md-7">
-              <%= simple_form_for @tattoo, :url => {:controller => 'landings', :action => 'update_text'}, :html => { :class => '' }, remote: true  do |f| %>
-                <%= f.input :script, label: false, placeholder: "Enter Your Words Here..." %>
-              <% end %>
+            <div class="row">
+                <div class="cta col-md-offset-1 col-md-7">
+                  <%= button_to "Order This Tattoo Design", nil, class: "btn btn-success" %>
+                </div>
             </div>
-            <div class="font_categories col-md-3">
-              <h3>Font Categories</h3>
-              <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="cta col-md-offset-1 col-md-7">
-              <%= button_to "Order This Tattoo Design", nil, class: "btn btn-success" %>
-            </div>
-        </div>
-        <div class="row">
-            <div class="font_examples col-md-offset-1 col-md-7">
-              <h3>Font Examples from Selected Category</h3>
-              <ul>
-                <li class="live_text_samples">lorem ipsum</li>
-                <li class="live_text_samples">lorem ipsum</li>
-                <li class="live_text_samples">lorem ipsum</li>
-                <li class="live_text_samples">lorem ipsum</li>
-                <li class="live_text_samples">lorem ipsum</li>
-              </ul>
+            <div class="row">
+                <div class="font_examples col-md-offset-1 col-md-7">
+                  <h3>Font Examples from Selected Category</h3>
+                  <ul>
+                    <li class="live_text_samples">Example Text 1</li>
+                    <li class="live_text_samples">Example Text 2</li>
+                    <li class="live_text_samples">Example Text 3</li>
+                    <li class="live_text_samples">Example Text 4</li>
+                    <li class="live_text_samples">Example Text 5</li>
+                  </ul>
+                </div>
             </div>
         </div>
 
@@ -96,6 +111,5 @@
                 </div>
             </div>
         </footer>
-
     </div>
     <!-- /.container -->

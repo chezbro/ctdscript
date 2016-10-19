@@ -27,6 +27,20 @@ footer {
     margin: 50px 0;
 }
 
+// Font-Sizing Styling
+.font-size-list{
+    float: right;
+    li{
+        float: left;
+        margin: 0px 20px;
+        list-style-type: none;
+    }
+}
+
+
+
+// Responsive Styling
+
 @media(max-width:1200px) {
     .headline h1 {
         font-size: 140px;

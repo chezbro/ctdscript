@@ -13,7 +13,18 @@ class LandingsController < ApplicationController
 
 
   def update_font_size
-   @updated_font_size = params[:font_size].to_s
+    case params[:font_size]
+
+    when "small"
+      @updated_font_size = "12"
+    when "medium"
+      @updated_font_size = "18"
+    when "large"
+      @updated_font_size = "24"
+    end
+
+   @updated_font_size = params[:custom_font_size].to_s if params[:custom_font_size].present?
+
    respond_to do |format|
       format.js
       format.html
