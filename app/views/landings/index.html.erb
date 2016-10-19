@@ -8,7 +8,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Temporary.Ink</a>
+                <a class="navbar-brand" href="#">Temporary Ink</a>
             </div>
             <!-- Toggle Nav Links -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -42,21 +42,50 @@
     <div class="container">
         <p class="margin-t">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam omnis explicabo voluptate tempore saepe obcaecati sit quasi, ducimus voluptatum inventore accusamus similique provident, excepturi voluptas nesciunt sed. Cumque, similique. Nulla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus at laudantium officiis. Dolor numquam omnis, doloribus tenetur, vero id quam. Repudiandae esse necessitatibus eos, possimus inventore in similique provident nihil.</p>
 
-        <hr class="featurette-divider">
-
         <div class="row tattoo_script_content">
-            <div class="script_preferences col-md-offset-1 col-md-7"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit consequuntur quis sapiente cum laudantium ducimus tenetur non reiciendis enim, quam, officiis ea eum nostrum illum illo ex sunt blanditiis quas. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, sed, voluptates. Sint a explicabo in labore impedit tenetur voluptatum quos soluta sunt reiciendis voluptas ducimus, fugit illo, iure beatae cupiditate! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et placeat ipsa, suscipit autem dolorum recusandae ducimus numquam illum facilis dignissimos porro temporibus explicabo neque quae animi, nobis, saepe quaerat quos?</p></div>
-            <div class="social-sharing col-md-3"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit consequuntur quis sapiente cum laudantium ducimus tenetur non reiciendis enim, quam, officiis ea eum nostrum illum illo ex sunt blanditiis quas. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, sed, voluptates. Sint a explicabo in labore impedit tenetur voluptatum quos soluta sunt reiciendis voluptas ducimus, fugit illo, iure beatae cupiditate! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et placeat ipsa, suscipit autem dolorum recusandae ducimus numquam illum facilis dignissimos porro temporibus explicabo neque quae animi, nobis, saepe quaerat quos?</p></div>
+            <div class="script_preferences col-md-offset-1 col-md-7">
+                <h4>Sizing and Color Options</h4>
+                <div class="margin-t margin-b">
+                    <%= form_tag({:controller => "landings", :action => 'update_font_size'}, :remote => true) do %>
+                        <%= number_field_tag :font_size, params[:font_size], placeholder: "Enter Font Size" %>
+                    <% end %>
+                </div>
+            </div>
+            <div class="social-sharing col-md-3"><h4>Sharing Options</h4></div>
         </div>
         <div class="row">
-            <div class="enter_script_content col-md-offset-1 col-md-7"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit consequuntur quis sapiente cum laudantium ducimus tenetur non reiciendis enim, quam, officiis ea eum nostrum illum illo ex sunt blanditiis quas. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, sed, voluptates. Sint a explicabo in labore impedit tenetur voluptatum quos soluta sunt reiciendis voluptas ducimus, fugit illo, iure beatae cupiditate! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et placeat ipsa, suscipit autem dolorum recusandae ducimus numquam illum facilis dignissimos porro temporibus explicabo neque quae animi, nobis, saepe quaerat quos?</p></div>
-            <div class="font_categories col-md-3"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit consequuntur quis sapiente cum laudantium ducimus tenetur non reiciendis enim, quam, officiis ea eum nostrum illum illo ex sunt blanditiis quas. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, sed, voluptates. Sint a explicabo in labore impedit tenetur voluptatum quos soluta sunt reiciendis voluptas ducimus, fugit illo, iure beatae cupiditate! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et placeat ipsa, suscipit autem dolorum recusandae ducimus numquam illum facilis dignissimos porro temporibus explicabo neque quae animi, nobis, saepe quaerat quos?</p></div>
+            <div class="enter_script_content col-md-offset-1 col-md-7">
+              <%= simple_form_for @tattoo, :url => {:controller => 'landings', :action => 'update_text'}, :html => { :class => '' }, remote: true  do |f| %>
+                <%= f.input :script, label: false, placeholder: "Enter Your Words Here..." %>
+              <% end %>
+            </div>
+            <div class="font_categories col-md-3">
+              <h3>Font Categories</h3>
+              <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
         </div>
         <div class="row">
-            <div class="cta col-md-offset-1 col-md-7"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit consequuntur quis sapiente cum laudantium ducimus tenetur non reiciendis enim, quam, officiis ea eum nostrum illum illo ex sunt blanditiis quas. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, sed, voluptates. Sint a explicabo in labore impedit tenetur voluptatum quos soluta sunt reiciendis voluptas ducimus, fugit illo, iure beatae cupiditate! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et placeat ipsa, suscipit autem dolorum recusandae ducimus numquam illum facilis dignissimos porro temporibus explicabo neque quae animi, nobis, saepe quaerat quos?</p></div>
+            <div class="cta col-md-offset-1 col-md-7">
+              <%= button_to "Order This Tattoo Design", nil, class: "btn btn-success" %>
+            </div>
         </div>
         <div class="row">
-            <div class="font_examples col-md-offset-1 col-md-7"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit consequuntur quis sapiente cum laudantium ducimus tenetur non reiciendis enim, quam, officiis ea eum nostrum illum illo ex sunt blanditiis quas. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, sed, voluptates. Sint a explicabo in labore impedit tenetur voluptatum quos soluta sunt reiciendis voluptas ducimus, fugit illo, iure beatae cupiditate! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et placeat ipsa, suscipit autem dolorum recusandae ducimus numquam illum facilis dignissimos porro temporibus explicabo neque quae animi, nobis, saepe quaerat quos?</p></div>
+            <div class="font_examples col-md-offset-1 col-md-7">
+              <h3>Font Examples from Selected Category</h3>
+              <ul>
+                <li class="live_text_samples">lorem ipsum</li>
+                <li class="live_text_samples">lorem ipsum</li>
+                <li class="live_text_samples">lorem ipsum</li>
+                <li class="live_text_samples">lorem ipsum</li>
+                <li class="live_text_samples">lorem ipsum</li>
+              </ul>
+            </div>
         </div>
 
         <!-- Footer -->
