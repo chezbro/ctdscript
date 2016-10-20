@@ -55,6 +55,7 @@
                             </li>
                             <li>
                                 <%= link_to "Large", update_font_size_path(font_size: "large"), method: :post, remote: true %>
+
                             </li>
                             <li>
                                 <!-- Beginning of Form to Change Font Size  -->
@@ -69,8 +70,10 @@
             <div class="row">
                 <div class="enter_script_content col-md-offset-1 col-md-7">
                 <!-- Beginning of Form for Users to Enter Script -->
-                  <%= simple_form_for @tattoo, :url => {:controller => 'landings', :action => 'update_text'}, :html => { :class => '' }, remote: true  do |f| %>
-                    <%= f.input :script, label: false, placeholder: "Enter Your Words Here..." %>
+                  <%= simple_form_for @tattoo, :url => {:controller => 'landings', :action => 'update_text'}, :html => { :id => "tattoo_script_form" }, remote: true  do |f| %>
+
+                    <%= f.input :script, label: false, autofocus: true, :input_html => { class: "script_input_field" }, placeholder: "Enter Your Words Here..." %>
+
                   <% end %>
                 </div>
                 <div class="font_categories col-md-3">
