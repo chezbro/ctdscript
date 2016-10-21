@@ -1,0 +1,1 @@
+json.partial! "font_categories/font_category", font_category: @font_category

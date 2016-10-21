@@ -1,0 +1,1 @@
+json.array! @font_categories, partial: 'font_categories/font_category', as: :font_category

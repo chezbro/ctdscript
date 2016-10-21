@@ -53,3 +53,4 @@ gem 'bootstrap-sass-extras'
 gem 'validates_formatting_of'
 gem 'tzinfo-data'
 gem 'rails_12factor', group: :production
+gem 'jquery-ui-rails'

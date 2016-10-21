@@ -11,10 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161018221331) do
+ActiveRecord::Schema.define(version: 20161020200028) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "font_categories", force: true do |t|
+    t.string   "name"
+    t.integer  "number_of_fonts"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "fonts", force: true do |t|
     t.string   "name"
@@ -22,6 +29,7 @@ ActiveRecord::Schema.define(version: 20161018221331) do
     t.string   "category"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "font_category_id"
   end
 
   create_table "tattoos", force: true do |t|

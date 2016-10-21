@@ -37,6 +37,52 @@ footer {
     }
 }
 
+// Font Examples
+
+.font_examples {
+    li{
+        line-height: 110%;
+    }
+}
+
+// Font Slider
+
+.fontSliderHolder {
+    float:left;
+    width:200px;
+    padding:6px 6px 6px 10px;
+    margin:0px;
+    border:1px solid #CCC;
+    background:#EEE;
+}
+.holder {
+    padding:10px !important;
+    width:130px;
+    float:left;
+}
+.sliderLabelHolder {
+    width:24px;
+    height:40px;
+    float:left;
+}
+.sliderLabelContainer {
+    color:#999;
+}
+.sliderT {
+    font-size:100%;
+    float:left;
+    width:20px;
+    position:relative;
+    top:8px;
+}
+.sliderB {
+    font-size:200%;
+}
+
+
+// 
+
+
 
 
 // Responsive Styling

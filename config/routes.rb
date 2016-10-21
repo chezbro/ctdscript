@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :font_categories
+
   get 'landings/index'
 
   root 'landings#index'

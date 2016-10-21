@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @font_category.name %>
+</p>
+
+<p>
+  <strong>Number of fonts:</strong>
+  <%= @font_category.number_of_fonts %>
+</p>
+
+<%= link_to 'Edit', edit_font_category_path(@font_category) %> |
+<%= link_to 'Back', font_categories_path %>

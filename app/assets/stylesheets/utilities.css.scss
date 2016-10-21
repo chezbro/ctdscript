@@ -202,6 +202,10 @@ $spacer-y: $spacer !default;
   float: left;
 }
 
+.clearBlock {
+    clear:both;
+}
+
 /*============================================
   Display Settings
 ==============================================*/
