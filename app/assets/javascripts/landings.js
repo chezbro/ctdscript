@@ -44,6 +44,18 @@ $(function() {
   });
 
 // End of Font Color
+  
+  $(".order_button").click(function(event) {
+    event.preventDefault();
+    var font_size = $(".script_input_field").css("font-size");
+    var font_color = $(".script_input_field").css("color");
+    var script = $("#tattoo_script_form").serialize();
+    $.ajax({
+      type: "POST",
+      url: "/tattoos",
+      data: { size: font_size, color: font_color, script: script }
+    });
+  });
 
 // End of JS
 });

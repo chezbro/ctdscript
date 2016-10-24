@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161024183215) do
+ActiveRecord::Schema.define(version: 20161024201418) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +39,8 @@ ActiveRecord::Schema.define(version: 20161024183215) do
     t.integer  "font_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "size"
+    t.string   "hex"
   end
 
   add_index "tattoos", ["font_id"], name: "index_tattoos_on_font_id", using: :btree
