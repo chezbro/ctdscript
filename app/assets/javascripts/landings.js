@@ -19,12 +19,13 @@ $(function() {
       value: 110,
       slide: function(event, ui) {
           $(".live_text_samples").css("font-size", ui.value + "%");
+          $(".script_input_field").css("font-size", ui.value + "%");
+          $(".script_input_field").css("height", ui.value + "%");
       }
   });
 // End of Font Size Slider
 
 // Start of Font Color
-
   $('#colorSelector').ColorPicker({
     color: '#000',
     onShow: function (colpkr) {
@@ -38,6 +39,7 @@ $(function() {
     onChange: function (hsb, hex, rgb) {
       $('#colorSelector div').css('backgroundColor', '#' + hex);
       $(".live_text_samples").css('color', '#' + hex);
+      $(".script_input_field").css('color', '#' + hex);
     }
   });
 

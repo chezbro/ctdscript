@@ -1,6 +1,7 @@
 class LandingsController < ApplicationController
   def index
     @tattoo = Tattoo.new
+    @featured_fonts = Font.where(featured: true)
   end
 
   def update_text

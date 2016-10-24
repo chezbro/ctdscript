@@ -1,3 +1,3 @@
 <%= simple_form_for @tattoo, :url => {:controller => 'landings', :action => 'update_text'}, :html => { :id => "tattoo_script_form" }, remote: true  do |f| %>
-  <%= f.input :script, label: false, autofocus: true, :input_html => { class: "script_input_field" }, placeholder: "Enter Your Words Here..." %>
+  <%= f.input :script, label: false, autofocus: true, :input_html => { class: "script_input_field" }, placeholder: "Enter Your Custom Tattoo Here..." %>
 <% end %>

@@ -40,18 +40,22 @@ footer {
 // Font Examples
 
 .font_examples {
+    ul{
+        padding: 0px;
+    }
     li{
-        line-height: 110%;
+        list-style-type: none; 
+        margin: 5px 10px;
+        line-height: 120%;
     }
 }
 
 // Font Slider
 
 .fontSliderHolder {
-    float:left;
     width:200px;
     padding:6px 6px 6px 10px;
-    margin:0px;
+    margin:0px 20px;
     border:1px solid #CCC;
     background:#EEE;
 }
