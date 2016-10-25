@@ -49,14 +49,27 @@ $(function() {
     event.preventDefault();
     var font_size = $(".script_input_field").css("font-size");
     var font_color = $(".script_input_field").css("color");
-    var script = $("#tattoo_script_form").serialize();
+    var script = $("#tattoo_script_form");
+    var serialized_script = script.serialize();
     $.ajax({
       type: "POST",
       url: "/tattoos",
-      data: { size: font_size, color: font_color, script: script }
+      data: { script: serialized_script, size: font_size, color: font_color } 
     });
   });
 
-// End of JS
+  // Match Styling from Index on Show Page
+  $(function() { 
+    // Currently have to refresh pg to load this JS.
+    if ($(".order_script").length ) {
+      var font_size = $(".tattoo_size").html().trim();
+      var font_color = $(".tattoo_color").html().trim();
+      $(".order_script").css("color", "#" + font_color);
+      $(".order_script").css("font-size", font_size);
+    }
+  });
+  // End of Show Styling
+
+// End of All JS
 });
 

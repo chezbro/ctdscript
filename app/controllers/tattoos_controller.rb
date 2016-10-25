@@ -25,11 +25,9 @@ class TattoosController < ApplicationController
   # POST /tattoos.json
   def create
     @tattoo = Tattoo.new(script: params[:script], size: params[:size], hex: params[:color])
-
-    binding.pry
     respond_to do |format|
       if @tattoo.save
-        format.html { redirect_to root_url, notice: 'Tattoo was successfully created.' }
+        format.html { redirect_to @tattoo, notice: 'Tattoo was successfully created.' }
         format.json { render :show, status: :created, location: @tattoo }
       else
         format.html { render :new }
