@@ -13,23 +13,23 @@ class LandingsController < ApplicationController
   end
 
 
-  def update_font_size
-    case params[:font_size]
-
-    when "small"
-      @updated_font_size = "12"
-    when "medium"
-      @updated_font_size = "18"
-    when "large"
-      @updated_font_size = "24"
-    end
-
-   @updated_font_size = params[:custom_font_size].to_s if params[:custom_font_size].present?
-
-   respond_to do |format|
-      format.js
-      format.html
-   end
+  def font_category_selection
+    case params[:font_category]
+      when "Animal"
+        @font_category = FontCategory.find_by_name("Animal")
+      when "Celtic"
+        @font_category = FontCategory.find_by_name("Celtic")
+      when "Famous"
+        @font_category = FontCategory.find_by_name("Famous")
+      when "Graffiti"
+        @font_category = FontCategory.find_by_name("Graffiti")
+      when "Misc"
+        @font_category = FontCategory.find_by_name("Misc")
+      end
+  end
+  respond_to do |format|
+    format.js
+    format.html
   end
 
 end

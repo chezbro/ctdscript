@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   post   "update_text"   => "landings#update_text",      as: :update_text
 
-  post   "update_font_size"   => "landings#update_font_size",      as: :update_font_size
+  get   "font_category_selection"   => "landings#font_category_selection",      as: :font_category_selection
 
   resources :tattoos
 

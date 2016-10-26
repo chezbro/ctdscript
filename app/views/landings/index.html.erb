@@ -90,11 +90,11 @@
                     <div class="font_categories">
                       <h3>Font Categories</h3>
                       <ul class="font-categories">
-                        <li>Animal</li>
-                        <li>Celtic / Irish</li>
-                        <li>Famous</li>
-                        <li>Graffiti</li>
-                        <li>Misc</li>
+                        <li><%= link_to "Animal", font_category_selection_path(font_category: "Animal"), remote: true %></li>
+                        <li><%= link_to "Celtic / Irish", font_category_selection_path(font_category: "Celtic"), remote: true %></li>
+                        <li><%= link_to "Famous", font_category_selection_path(font_category: "Famous"), remote: true %></li>
+                        <li><%= link_to "Graffiti", font_category_selection_path(font_category: "Graffiti"), remote: true %></li>
+                        <li><%= link_to "Misc", font_category_selection_path(font_category: "Misc"), remote: true %></li>
                       </ul>
                     </div>
                 </div>
