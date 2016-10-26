@@ -20,7 +20,10 @@ $(function() {
       slide: function(event, ui) {
           $(".live_text_samples").css("font-size", ui.value + "%");
           $(".script_input_field").css("font-size", ui.value + "%");
-          $(".script_input_field").css("height", ui.value + "%");
+          $(".script_input_field").css({
+            "font-size": ui.value + "%",
+            "height" :ui.value + "%"
+          });
       }
   });
 // End of Font Size Slider
@@ -58,7 +61,7 @@ $(function() {
     });
   });
 
-  // Match Styling from Index on Show Page
+  // JS to match User's styling from Index page
   $(function() { 
     // Currently have to refresh pg to load this JS.
     if ($(".order_script").length ) {
