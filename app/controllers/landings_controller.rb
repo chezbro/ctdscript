@@ -1,4 +1,5 @@
 class LandingsController < ApplicationController
+
   def index
     @tattoo = Tattoo.new
     @featured_fonts = Font.where(featured: true)
@@ -11,7 +12,6 @@ class LandingsController < ApplicationController
       format.html
    end
   end
-
 
   def font_category_selection
     case params[:font_category]

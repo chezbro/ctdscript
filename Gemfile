@@ -47,6 +47,8 @@ end
 
 gem 'puma'
 gem 'simple_form'
+gem "imgkit"
+gem "wkhtmltoimage-binary"
 gem 'binding_of_caller'
 gem 'bootstrap-sass', '3.3.5'
 gem 'bootstrap-sass-extras'

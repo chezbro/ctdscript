@@ -29,7 +29,7 @@ $(function() {
 // End of Font Size Slider
 
 // Start of Font Color
-  $('#colorSelector').ColorPicker({
+  $('#colorSelector').colorPicker({
     color: '#000',
     onShow: function (colpkr) {
       $(colpkr).fadeIn(500);

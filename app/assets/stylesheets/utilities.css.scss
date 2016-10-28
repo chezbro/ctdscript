@@ -217,6 +217,10 @@ $spacer-y: $spacer !default;
   display: inline-block;
 }
 
+.inline-block-important{
+  display: inline-block!important;
+}
+
 .display-block{
   display: block;
 }

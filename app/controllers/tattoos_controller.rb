@@ -36,6 +36,14 @@ class TattoosController < ApplicationController
     end
   end
 
+  def convert_image
+    @kit = IMGKit.new(render_to_string)
+
+    format.jpg do
+      send_data(@kit.to_jpg, :type => "image/jpeg", :disposition => 'inline')
+    end
+  end
+
   # PATCH/PUT /tattoos/1
   # PATCH/PUT /tattoos/1.json
   def update
