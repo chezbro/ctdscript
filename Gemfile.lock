@@ -64,6 +64,8 @@ GEM
       thor (>= 0.14, < 2.0)
     jquery-ui-rails (5.0.5)
       railties (>= 3.2.16)
+    jquery_mobile_rails (1.4.5)
+      railties (>= 3.1.0)
     json (1.8.3)
     mail (2.5.4)
       mime-types (~> 1.16)
@@ -163,6 +165,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   jquery-ui-rails
+  jquery_mobile_rails
   pg
   pry-rails
   puma

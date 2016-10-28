@@ -11,13 +11,15 @@ $(function() {
 // End of Live Text 
 
 // Start of Font Size Slider
-  $("#slider-horizontal").slider({
+  $("#slider").slider({
       orientation: "horizontal",
       range: "min",
       min: 100,
       max: 750,
       value: 110,
       slide: function(event, ui) {
+          console.log(ui);
+          console.log(event);
           $(".live_text_samples").css("font-size", ui.value + "%");
           $(".script_input_field").css("font-size", ui.value + "%");
           $(".script_input_field").css({
@@ -28,23 +30,8 @@ $(function() {
   });
 // End of Font Size Slider
 
+
 // Start of Font Color
-  $('#colorSelector').colorPicker({
-    color: '#000',
-    onShow: function (colpkr) {
-      $(colpkr).fadeIn(500);
-      return false;
-    },
-    onHide: function (colpkr) {
-      $(colpkr).fadeOut(500);
-      return false;
-    },
-    onChange: function (hsb, hex, rgb) {
-      $('#colorSelector div').css('backgroundColor', '#' + hex);
-      $(".live_text_samples").css('color', '#' + hex);
-      $(".script_input_field").css('color', '#' + hex);
-    }
-  });
 
 // End of Font Color
   

@@ -1,1 +1,16 @@
-<div id="colorSelector"><div id="current_colorSelector_color" style="background-color: #000"></div></div>
+<div class="col-sm-3 col-xs-12 changeColor inline-block">
+  <button
+    class="jscolor {onFineChange:'update(this)'}"
+    style="border:2px solid black">
+    Pick a color
+</button>
+</div>
+
+
+<script>
+function update(jscolor) {
+    $('#colorSelector div').css('backgroundColor', '#' + jscolor);
+    $(".live_text_samples").css('color', '#' + jscolor);
+    $(".script_input_field").css('color', '#' + jscolor);
+}
+</script>
