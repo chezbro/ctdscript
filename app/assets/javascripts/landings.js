@@ -16,7 +16,7 @@ $(function() {
       range: "min",
       min: 100,
       max: 350,
-      value: 110,
+      value: 150,
       slide: function(event, ui) {
           console.log(ui);
           console.log(event);
@@ -60,6 +60,12 @@ $(function() {
   });
 // End of Show Styling
 
+// Change Font Families
+
+  $(".live_text_samples").click(function() {
+      $(".script_input_field").css("font-family", (this.classList[1]));
+
+  });
 
 
 // End of All JS
