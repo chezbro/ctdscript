@@ -1,12 +1,11 @@
-<div class="margin-t-md text-center col-sm-3 col-xs-12 changeColor inline-block">
+<div class="margin-t-md text-center col-xs-3 changeColor inline-block">
   <button class="btn btn-primary jscolor {valueElement:null, onFineChange:'update(this)'}" style="border:2px solid black">&nbsp;&nbsp;</button>
 </div>
 
-
 <script>
-function update(jscolor) {
-    $('#colorSelector div').css('backgroundColor', '#' + jscolor);
-    $(".live_text_samples").css('color', '#' + jscolor);
-    $(".script_input_field").css('color', '#' + jscolor);
-}
+  function update(jscolor) {
+      $('#colorSelector div').css('backgroundColor', '#' + jscolor);
+      $(".live_text_samples").css('color', '#' + jscolor);
+      $(".script_input_field").css('color', '#' + jscolor);
+  }
 </script>
