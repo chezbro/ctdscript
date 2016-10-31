@@ -15,7 +15,7 @@ $(function() {
       orientation: "horizontal",
       range: "min",
       min: 100,
-      max: 750,
+      max: 350,
       value: 110,
       slide: function(event, ui) {
           console.log(ui);
