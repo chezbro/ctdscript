@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   resources :tattoos
 
+  get 'tattoos/:id' => 'tattoos#show', :defaults => { :format => 'jpg' }
+
 
 
   

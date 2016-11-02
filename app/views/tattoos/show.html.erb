@@ -2,6 +2,9 @@
 <h1 class="order_script">
   <%= @tattoo.script %>
 </h1>
+<div>
+  <%= button_to "View Tattoo Image",  tattoo_path(@tattoo, format: :jpg), method: :get, class: "btn btn-danger" %>
+</div>
 <div class="hidden-styling display-none">
   <p class="tattoo_color">
     <%= @tattoo.rgb_to_hex(@tattoo.hex) %>
@@ -10,3 +13,4 @@
     <%= @tattoo.size %>
   </p>
 </div>
+
