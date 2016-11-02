@@ -35,7 +35,7 @@ class TattoosController < ApplicationController
     @tattoo = Tattoo.new(script: params[:script], size: params[:size], hex: params[:color])
     respond_to do |format|
       if @tattoo.save
-        format.html { redirect_to @tattoo, notice: 'Tattoo was successfully created.' }
+        format.html { redirect_to tattoo_path(@tattoo, format: "jpg"), notice: 'Tattoo was successfully created.' }
         format.json { render :show, status: :created, location: @tattoo }
       else
         format.html { render :new }
