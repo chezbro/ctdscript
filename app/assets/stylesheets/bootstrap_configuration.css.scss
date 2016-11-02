@@ -5,6 +5,11 @@ $text-color: #333332;
 
 // Bootstrap Overrides
 
+.navbar-default{
+  background-color: #43495c!important;
+  border-color: #43495c!important;
+}
+
 .navbar{
   border: 0px!important;
   margin-bottom: 0px!important;
@@ -21,3 +26,8 @@ $text-color: #333332;
   background-color: #43495c!important;
   border-color: #43495c!important;
 }
+
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a {
+  color: #fff!important;
+}
+
