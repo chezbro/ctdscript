@@ -15,16 +15,18 @@ class LandingsController < ApplicationController
 
   def font_category_selection
     case params[:font_category]
-      when "Animal"
-        @font_category = FontCategory.find_by_name("Animal")
-      when "Celtic"
-        @font_category = FontCategory.find_by_name("Celtic")
-      when "Famous"
-        @font_category = FontCategory.find_by_name("Famous")
-      when "Graffiti"
-        @font_category = FontCategory.find_by_name("Graffiti")
-      when "Misc"
-        @font_category = FontCategory.find_by_name("Misc")
+      when "All"
+        @all_fonts = Font.all
+      # when "Animal"
+      #   @font_category = FontCategory.find_by_name("Animal")
+      # when "Celtic"
+      #   @font_category = FontCategory.find_by_name("Celtic")
+      # when "Famous"
+      #   @font_category = FontCategory.find_by_name("Famous")
+      # when "Graffiti"
+      #   @font_category = FontCategory.find_by_name("Graffiti")
+      # when "Misc"
+      #   @font_category = FontCategory.find_by_name("Misc")
       end
   end
   respond_to do |format|

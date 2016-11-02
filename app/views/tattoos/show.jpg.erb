@@ -1,0 +1,12 @@
+<h1>Tattoo:</h1>
+<h1 class="order_script">
+  <%= @tattoo.script %>
+</h1>
+<div class="hidden-styling display-none">
+  <p class="tattoo_color">
+    <%= @tattoo.rgb_to_hex(@tattoo.hex) %>
+  </p>
+  <p class="tattoo_size">
+    <%= @tattoo.size %>
+  </p>
+</div>

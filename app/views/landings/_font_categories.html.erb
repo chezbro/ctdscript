@@ -1,7 +1,10 @@
 <ul>
-    <% @font_category.fonts.each do |f| %>
+    <% @all_fonts.each do |f| %>
   <li>
       <%= f.name %>
+  </li>
+  <li>
+      <%= f.s3_url %>
   </li>
     <% end %>
 </ul>

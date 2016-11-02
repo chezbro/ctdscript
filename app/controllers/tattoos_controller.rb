@@ -10,6 +10,13 @@ class TattoosController < ApplicationController
   # GET /tattoos/1
   # GET /tattoos/1.json
   def show
+    respond_to do |format|
+      format.html
+      format.jpg do
+        kit = IMGKit.new render_to_string, width: 300, height: 300
+        send_data kit.to_jpg, type: "image/jpeg", disposition: "inline"
+      end
+    end
   end
 
   # GET /tattoos/new
@@ -33,14 +40,6 @@ class TattoosController < ApplicationController
         format.html { render :new }
         format.json { render json: @tattoo.errors, status: :unprocessable_entity }
       end
-    end
-  end
-
-  def convert_image
-    @kit = IMGKit.new(render_to_string)
-
-    format.jpg do
-      send_data(@kit.to_jpg, :type => "image/jpeg", :disposition => 'inline')
     end
   end
 

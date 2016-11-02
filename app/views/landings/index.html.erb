@@ -91,6 +91,7 @@
                     <div class="font_categories">
                       <h3>Font Categories</h3>
                       <ul class="font-categories">
+                        <li><%= link_to "All Fonts", font_category_selection_path(font_category: "All"), remote: true %></li>
                         <li><%= link_to "Animal", font_category_selection_path(font_category: "Animal"), remote: true %></li>
                         <li><%= link_to "Celtic / Irish", font_category_selection_path(font_category: "Celtic"), remote: true %></li>
                         <li><%= link_to "Famous", font_category_selection_path(font_category: "Famous"), remote: true %></li>
