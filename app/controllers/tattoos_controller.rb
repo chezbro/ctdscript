@@ -13,7 +13,7 @@ class TattoosController < ApplicationController
     respond_to do |format|
       format.html
       format.jpg do
-        kit = IMGKit.new(render_to_string, height: 500, transparent:true, quality:10)
+        kit = IMGKit.new(render_to_string, height: 500, quality:100)
         # kit.stylesheets << "#{Rails.root}/assets/landings.css"
         send_data kit.to_jpg, type: "image/jpeg", disposition: "inline"
       end
