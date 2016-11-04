@@ -12,11 +12,11 @@ class TattoosController < ApplicationController
   def show
     respond_to do |format|
       format.html
-      format.jpg do
-        kit = IMGKit.new(render_to_string, height: 500, quality:100)
-        # kit.stylesheets << "#{Rails.root}/assets/landings.css"
-        send_data kit.to_jpg, type: "image/jpeg", disposition: "inline"
-      end
+      # format.jpg do
+      #   kit = IMGKit.new(render_to_string, height: 500, quality:100)
+      #   # kit.stylesheets << "#{Rails.root}/assets/landings.css"
+      #   send_data kit.to_jpg, type: "image/jpeg", disposition: "inline"
+      # end
     end
   end
 
@@ -35,7 +35,7 @@ class TattoosController < ApplicationController
     @tattoo = Tattoo.new(script: params[:script], size: params[:size], hex: params[:color])
     respond_to do |format|
       if @tattoo.save
-        format.html { redirect_to tattoo_path(@tattoo, format: "jpg"), notice: 'Tattoo was successfully created.' }
+        format.html { render root_url, notice: 'Tattoo was successfully created.' }
         format.json { render :show, status: :created, location: @tattoo }
       else
         format.html { render :new }

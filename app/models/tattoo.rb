@@ -2,6 +2,7 @@ class Tattoo < ActiveRecord::Base
   belongs_to :font
   # before_save :rgb_to_hex
 
+  
 
   def rgb_to_hex(value)
     value.match(/[\d,\s]+/)[0].split(',').map(&:strip).map { |value|
